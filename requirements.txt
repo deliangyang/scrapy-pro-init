@@ -1,0 +1,4 @@
+Scrapy
+MySQL-python
+
+#pip  install --index https://pypi.mirrors.ustc.edu.cn/simple/
