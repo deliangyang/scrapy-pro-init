@@ -73,7 +73,9 @@ ROBOTSTXT_OBEY = True
 #}
 
 ITEM_PIPELINES = {
-    'scrapy_redis.pipelines.RedisPipeline': 300
+    'scrapy_redis.pipelines.RedisPipeline': 300,
+    'scrapy.pipelines.files.FilesPipeline': 1,
+    'scrapy_pro_init.pipelines.UserDefaultImagesPipeline': 1,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -96,3 +98,6 @@ ITEM_PIPELINES = {
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+# image download
+IMAGES_STORE = '/tmp/'
